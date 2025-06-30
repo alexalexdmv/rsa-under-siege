@@ -22,7 +22,17 @@ def pollardRho(n: int, f=lambda x: x**2 + 1):
 
     # Return the non-trivial factor
     if result != n:
-        return result
+        return result, n // result
     
     else:
         raise ValueError("Failed to find a non-trivial prime factor. Try another function or different starting values")
+
+
+# Attack demonstration
+
+# Public modulo n
+n = 8567
+
+p, q = pollardRho(n)
+
+print(f"The factors are {p} and {q}")

@@ -66,12 +66,15 @@ def shor_classical(n: int, max_attempts: int = 10):
     # If no factors found in all attempts
     raise ValueError(f"Failed to factor n = {n} after {max_attempts} attempts.")
 
-if __name__ == "__main__":
-    N = 1357  # You can try other semi-primes like 21, 35, 77
-    print(f"Factoring N = {N} using classical Shor simulation...")
+# Attack demonstration
 
-    try:
-        p, q = shor_classical(N)
-        print(f"\nSuccess! Factors of {N}: {p} × {q}")
-    except ValueError as e:
-        print(str(e))
+# Public exponent N
+N = 1357
+print(f"Factoring N = {N} using Shor's algorithm")
+
+try:
+    p, q = shor_classical(N)
+    print(f"\nSuccess! Factors of {N}: {p} × {q}")
+
+except ValueError as e:
+    print(str(e))

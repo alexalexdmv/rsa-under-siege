@@ -12,7 +12,7 @@ def hastad_broadcast(cipher_list, n_list, e):
 
     return m
 
-# Calculate the Chinese Remainder Theroem in order to reconstruct m^e modulo N, where N is the product of all moduli
+# Calculate the Chinese Remainder Theorem in order to reconstruct m^e modulo N, where N is the product of all moduli
 # Note: the different moduli have to be pairwise coprime
 def crt(cipher_list, n_list):
     

@@ -33,3 +33,13 @@ def is_perfect_square(x: int):
     y = isqrt(x)
 
     return y * y == x  
+
+
+# Attack demonstration
+
+# Public modulo n
+n = 8567
+
+p, q = fermatFactor(n)
+
+print(f"The factors are {p} and {q}")
